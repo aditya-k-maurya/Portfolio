@@ -716,3 +716,48 @@ ul {
 	height: 50px;
 	padding: 0 50px;
 }
+
+@media (max-width: 1199px) {
+	.aside {
+		left: -270px;
+	}
+
+	.main-content {
+		padding-left: 0px !important;
+	}
+
+	.info-item p span {
+		display: block;
+	}
+}
+
+@media (max-width: 990px) {
+	.contact-info-item,
+	.service-item,
+	.portfolio-item {
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+
+	.home-info {
+		flex: 0 0 100%;
+	}
+
+	.home-img {
+		display: none;
+	}
+}
+
+@media (max-width: 780px) {
+	.col-6,
+	.contact-info-item,
+	.portfolio-item,
+	.service-item,
+	.skills,
+	.education,
+	.experience,
+	.personal-info {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+}
