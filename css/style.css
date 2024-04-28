@@ -45,15 +45,38 @@ ul {
 	display: block;
 	padding: 0 30px;
 	opacity: 1;
+	position: fixed;
+	left: 270px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.back-section{
+	z-index: 1;
+}
+.section.active{
+	z-index: 2;
+	opacity: 1;
+	animation: slideSection 1s ease;
+}
+
+@keyframes slideSection{
+	0%{
+		transform: translateX(100%);
+	}
+	100%{
+		transform: translateX(0%);
+	}
 }
 
 .hidden {
 	display: none !important;
 }
 
-.main-content {
-	padding-left: 270px !important;
-}
 
 .padd-15 {
 	padding-left: 15px;
@@ -735,8 +758,18 @@ ul {
 		left: -270px;
 	}
 
-	.main-content {
-		padding-left: 0px !important;
+	.nav-toggler{
+		display: flex !important;
+		/* left: 30px; */
+		/* z-index: 100; */
+	}
+
+	.aside .open{
+		left: 0;
+	}
+
+	.section{
+		left: 0;
 	}
 
 	.info-item p span {
