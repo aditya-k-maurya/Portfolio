@@ -53,6 +53,7 @@ ul {
 	z-index: 0;
 	overflow-y: auto;
 	overflow-x: hidden;
+	transition: all 0.3s ease;
 }
 
 .back-section{
@@ -161,7 +162,7 @@ ul {
 .aside {
 	width: 270px;
 	background: var(--bg-black-100);
-	position: fixed;
+	position: absolute;
 	left: 0;
 	top: 0;
 	z-index: 10;
@@ -171,6 +172,7 @@ ul {
 	align-items: center;
 	padding: 30px;
 	border-right: 1px solid var(--bg-black-50);
+	transition: all 0.3 ease;
 }
 
 .aside .logo {
@@ -232,6 +234,7 @@ ul {
 	display: none;
 	align-items: center;
 	justify-content: center;
+	transition: all 0.3s ease;
 }
 
 .nav-toggler span {
@@ -252,6 +255,11 @@ ul {
 	left: 0;
 }
 
+.nav-toggler.open span::before{
+	transform: rotate(45deg);
+	top: 0;
+}
+
 .nav-toggler span::after {
 	content: "";
 	height: 2px;
@@ -260,6 +268,11 @@ ul {
 	position: absolute;
 	top: 6px;
 	left: 0;
+}
+
+.nav-toggler.open span::after{
+	transform: rotate(-45deg);
+	top: 0;
 }
 
 .nav li {
@@ -764,12 +777,20 @@ ul {
 		/* z-index: 100; */
 	}
 
-	.aside .open{
+	.nav-toggler.open{
+		left: 300px;
+	}
+
+	.open{
 		left: 0;
 	}
 
 	.section{
 		left: 0;
+	}
+
+	.section.open{
+		left: 270px;
 	}
 
 	.info-item p span {
