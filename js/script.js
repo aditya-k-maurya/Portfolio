@@ -19,12 +19,21 @@ const nav = document.querySelector(".nav"),
 	allSection = document.querySelectorAll(".section"),
 	totalSection = allSection.length;
 
+const aside = document.querySelector(".aside");
+const navTogglerBtn = document.querySelector(".nav-toggler");
+
+
 for (let i = 0; i < totalNavList; i++) {
 	const a = navList[i].querySelector("a");
 	a.addEventListener("click", function () {
 		for (let i = 0; i < totalSection; i++) {
 			allSection[i].classList.remove("back-section");
-		}
+    }
+    
+    if (aside.classList.contains("open")) {
+      aside.classList.remove("open")
+      navTogglerBtn.classList.remove("open")
+    }
 
 		for (let j = 0; j < totalNavList; j++) {
 			if (navList[j].querySelector("a").classList.contains("active")) {
@@ -45,13 +54,11 @@ function showSection(element) {
 	document.querySelector("#" + target).classList.add("active");
 }
 
-const navTogglerBtn = document.querySelector(".nav-toggler"),
-	aside = document.querySelector(".aside");
 navTogglerBtn.addEventListener("click", () => {
 	asideSectionTogglerBtn();
 });
 
 function asideSectionTogglerBtn() {
-  aside.classList.toggle("open");
-  navTogglerBtn.classList.toggle("open")
+	aside.classList.toggle("open");
+	navTogglerBtn.classList.toggle("open");
 }
