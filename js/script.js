@@ -22,22 +22,20 @@ const nav = document.querySelector(".nav"),
 const aside = document.querySelector(".aside");
 const navTogglerBtn = document.querySelector(".nav-toggler");
 
-
 for (let i = 0; i < totalNavList; i++) {
 	const a = navList[i].querySelector("a");
 	a.addEventListener("click", function () {
-		for (let i = 0; i < totalSection; i++) {
-			allSection[i].classList.remove("back-section");
-    }
-    
-    if (aside.classList.contains("open")) {
-      aside.classList.remove("open")
-      navTogglerBtn.classList.remove("open")
-    }
+    removeBackSection();
+
+		if (aside.classList.contains("open")) {
+			aside.classList.remove("open");
+			navTogglerBtn.classList.remove("open");
+		}
 
 		for (let j = 0; j < totalNavList; j++) {
-			if (navList[j].querySelector("a").classList.contains("active")) {
-				allSection[j].classList.add("back-section");
+      if (navList[j].querySelector("a").classList.contains("active")) {
+        addBackSection(j)
+				// allSection[j].classList.add("back-section");
 			}
 			navList[j].querySelector("a").classList.remove("active");
 		}
@@ -45,6 +43,36 @@ for (let i = 0; i < totalNavList; i++) {
 		showSection(this);
 	});
 }
+
+function updateNav(element) {
+	for (let i = 0; i < totalNavList; i++) {
+		navList[i].querySelector("a").classList.remove("active");
+		const target = element.getAttribute("href").split("#")[1];
+		if (
+			target ===
+			navList[i].querySelector("a").getAttribute("href").split("#")[1]
+		) {
+			navList[i].querySelector("a").classList.add("active");
+		}
+	}
+}
+
+function removeBackSection() {
+  for (let i = 0; i < totalSection; i++) {
+		allSection[i].classList.remove("back-section");
+	}
+}
+
+function addBackSection(num) {
+  allSection[num].classList.add("back-section");
+}
+
+document.querySelector(".hire-me").addEventListener("click", function () {
+  const sectionIndex = this.getAttribute("data-section-index");
+	showSection(this);
+  updateNav(this);
+  addBackSection(sectionIndex)
+});
 
 function showSection(element) {
 	for (let i = 0; i < totalSection; i++) {

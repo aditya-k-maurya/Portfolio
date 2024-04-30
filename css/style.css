@@ -441,7 +441,6 @@ ul {
 }
 
 .buttons .btn {
-	margin-right: 15px;
 	margin-top: 10px;
 }
 
@@ -776,6 +775,11 @@ ul {
 }
 
 @media (max-width: 1199px) {
+
+	.container{
+		padding-top: 70px;
+	}
+
 	.aside {
 		left: -270px;
 	}
