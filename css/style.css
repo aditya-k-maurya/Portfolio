@@ -417,6 +417,7 @@ ul {
 .info-item {
 	flex: 0 0 50%;
 	max-width: 50%;
+	overflow: hidden;
 }
 
 .info-item p {
