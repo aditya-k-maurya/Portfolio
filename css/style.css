@@ -680,6 +680,43 @@ ul {
 	width: 100%;
 }
 
+/* hobbies */
+.hobbie-item{
+	display: flex;
+	gap: 1rem;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 4rem;
+}
+
+.hobbie-text{
+	max-width: 60%;
+}
+
+.hobbie-text h2{
+	color: var(--skin-color);
+	font-weight: 700;
+	/* margin-top: 20px; */
+	margin-bottom: 10px;
+}
+
+.hobbie-text p{
+	color: var(--text-black-700);
+	line-height: 25px;
+	font-size: 15px;
+	font-weight: 500;
+}
+
+.hobbie-img{
+	max-width: 350px;
+	min-width: 200px;
+}
+
+.hobbie-img img{
+	width: 100%;
+
+}
+
 /* contact */
 
 .contact-title {
