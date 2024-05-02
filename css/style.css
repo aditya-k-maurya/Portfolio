@@ -191,11 +191,14 @@ ul {
 	padding: 15px 20px;
 	font-size: 30px;
 	letter-spacing: 5px;
+	
 }
 
 .logo span {
 	font-family: "Clicker Script", cursive;
 	font-size: 40px;
+	color: var(--skin-color);
+	font-weight: bold;
 }
 
 .logo a::before {
