@@ -97,7 +97,7 @@ ul {
 	max-width: 100%;
 	margin-bottom: 60px;
 	display: flex;
-	gap:2rem;
+	gap: 2rem;
 }
 
 .section-title h2 {
@@ -193,7 +193,6 @@ ul {
 	padding: 15px 20px;
 	font-size: 30px;
 	letter-spacing: 5px;
-	
 }
 
 .logo span {
@@ -381,9 +380,35 @@ ul {
 
 .home-img img {
 	height: 400px;
-	margin: auto;
+	/* margin: auto; */
 	border-radius: 5px;
 }
+
+.float-img {
+	display: none;
+	width: 100%;
+}
+
+.float-img img {
+	border-radius: 50%;
+	width: 20vw;
+	margin: auto;
+	animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+	0% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateY(-2.4rem);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+
 
 /* about */
 .about-content {
@@ -679,7 +704,6 @@ ul {
 .portfolio-img {
 	display: block;
 	box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
-
 }
 
 .portfolio-img img {
@@ -878,6 +902,9 @@ ul {
 	.home-img {
 		display: none;
 	}
+	.float-img {
+		display: flex;
+	}
 }
 
 @media (max-width: 780px) {
@@ -905,5 +932,10 @@ ul {
 
 	.hobbie-img {
 		width: 100%;
+	}
+
+	.float-img img{
+		width: 60%;
+		justify-content: center;
 	}
 }
