@@ -5,7 +5,7 @@ var typed = new Typed(".typing", {
 		"Web Designer",
 		"Web Developer",
 		"Graphic Designer",
-		"Competitive Programmer",
+		"Programmer",
 	],
 	typeSpeed: 100,
 	backSpeed: 60,

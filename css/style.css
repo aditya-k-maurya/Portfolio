@@ -101,10 +101,11 @@ ul {
 }
 
 .section-title h2 {
-	font-size: 40px;
+	font-size: 35px;
 	color: var(--text-black-900);
 	font-weight: 700;
 	position: relative;
+	letter-spacing: 1px;
 }
 
 .section-title h2::before {
@@ -348,7 +349,7 @@ ul {
 }
 
 .home-info p {
-	margin-bottom: 25px;
+	margin-bottom: 50px;
 	font-size: 14px;
 	line-height: 1.4rem;
 	letter-spacing: .6px;
@@ -860,6 +861,10 @@ ul {
 @media (max-width: 1199px) {
 	.container {
 		padding-top: 70px;
+	}
+
+	.home-container{
+		padding-top: 10px !important;
 	}
 
 	.aside {
