@@ -319,8 +319,11 @@ ul {
 }
 
 .hello {
-	font-size: 28px;
+	font-size: 3.6rem;
 	margin: 15px 0;
+	font-weight: 500;
+	letter-spacing: 4px;
+
 }
 
 .home .row {
@@ -328,24 +331,27 @@ ul {
 }
 
 .hello span {
-	font-family: "Satisfy", cursive;
-	font-size: 30px;
+	/* font-size: 30px; */
 	font-weight: 700;
 	color: var(--skin-color);
 }
 
 .my-profession {
-	font-size: 30px;
+	font-size: 25px;
 	margin: 15px 0;
+	font-weight: 600;
 }
 
 .typing {
 	color: var(--skin-color);
+	font-weight: 700;
 }
 
 .home-info p {
-	margin-bottom: 70px;
-	font-size: 18px;
+	margin-bottom: 25px;
+	font-size: 14px;
+	line-height: 1.4rem;
+	letter-spacing: .6px;
 	color: var(--text-black-700);
 }
 
@@ -392,7 +398,7 @@ ul {
 .float-img img {
 	border-radius: 50%;
 	width: 20vw;
-	margin: auto;
+	/* margin: auto; */
 	animation: floatImage 4s ease-in-out infinite;
 }
 
@@ -899,11 +905,17 @@ ul {
 		flex: 0 0 100%;
 	}
 
+	.home-info p{
+		font-size: 16px;
+		line-height: 1.6rem;
+	}
+
 	.home-img {
 		display: none;
 	}
 	.float-img {
 		display: flex;
+		/* justify-content: start !important; */
 	}
 }
 
@@ -918,10 +930,21 @@ ul {
 	.personal-info {
 		flex: 0 0 100%;
 		max-width: 100%;
+		
 	}
 }
 
 @media (max-width: 650px) {
+
+	.hello{
+		font-size: 2.4rem;
+	}
+
+	.home-info p{
+		font-size: 14px;
+		line-height: 1.4rem;
+	}
+
 	.hobbie-item {
 		flex-direction: column;
 	}
@@ -936,6 +959,6 @@ ul {
 
 	.float-img img{
 		width: 60%;
-		justify-content: center;
+		margin: auto !important;
 	}
 }
