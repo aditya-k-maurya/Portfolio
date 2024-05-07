@@ -705,13 +705,17 @@ ul {
 
 .portfolio-heading h2 {
 	color: var(--text-black-900);
-	font-weight: 500;
+	font-weight: 600;
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
 }
 
 .portfolio-item {
 	flex: 0 0 33.33%;
 	max-width: 33.33%;
 	margin-bottom: 30px;
+	
 }
 
 .portfolio-item-inner {
@@ -719,16 +723,19 @@ ul {
 	border-radius: 10px;
 	overflow: hidden;
 	cursor: pointer;
+	aspect-ratio: 14/9;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+
 .portfolio-img {
-	display: block;
 	box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+	object-fit: cover !important;
 }
 
 .portfolio-img img {
 	width: 100%;
-	object-fit: cover;
+	height: 100%;
 	object-position: center;
 }
 
@@ -793,6 +800,7 @@ ul {
 }
 
 .contact-info-item {
+
 	flex: 0 0 25%;
 	max-width: 25%;
 	text-align: center;

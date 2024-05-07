@@ -10,25 +10,25 @@
 }
 
 .dancing-hen {
-  width: 8rem;
+	width: 8rem;
 	left: -40px;
 	top: -16px;
 }
 
 .dog-call {
-  width: 5rem !important;
-  top: -15px;
+	width: 5rem !important;
+	top: -15px;
 }
 
-.chill-cat{
-  width: 4rem !important;
-  /* filter: saturate(50%); */
-  filter: brightness(80%) !important;
-  top: -15%;
+.chill-cat {
+	width: 4rem !important;
+	/* filter: saturate(50%); */
+	filter: brightness(80%) !important;
+	top: -15%;
 }
 
-.wow-reaction{
-  width: 4.5rem;
-  top: -10px;
-  
+.wow-reaction {
+	width: 4.5rem;
+	top: -10px;
 }
+
