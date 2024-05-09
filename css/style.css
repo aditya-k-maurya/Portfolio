@@ -6,7 +6,7 @@
 	--bg-black-50: #e8dfec;
 	--text-black-900: #302e4d;
 	--text-black-700: #504e70;
-	--grey: rgb(177, 177, 177);
+	--grey: rgb(199, 201, 202);
 }
 
 body.dark {
@@ -765,7 +765,7 @@ ul {
 	gap: 1rem;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 4rem;
+	margin-bottom: 2rem;
 	text-align: justify;
 	padding-bottom: 2rem;
 	border-bottom: 1px solid var(--grey);
