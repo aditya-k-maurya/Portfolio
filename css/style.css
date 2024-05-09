@@ -6,6 +6,7 @@
 	--bg-black-50: #e8dfec;
 	--text-black-900: #302e4d;
 	--text-black-700: #504e70;
+	--grey: rgb(177, 177, 177);
 }
 
 body.dark {
@@ -366,6 +367,7 @@ ul {
 	max-width: 60%;
 	text-align: center;
 	position: relative;
+	z-index: 10;
 }
 
 .home-img::after {
@@ -377,6 +379,7 @@ ul {
 	border-right: 10px solid var(--skin-color);
 	right: 20px;
 	bottom: -40px;
+	z-index: 10;
 }
 
 .home-img::before {
@@ -421,6 +424,17 @@ ul {
 	}
 }
 
+.home-design{
+	font-size: 6rem;
+	color: var(--grey);
+	position: fixed;
+	font-weight: 700;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	transform: rotate(90deg);
+	right: -360px;
+	top: 320px;
+}
 
 
 /* about */
@@ -475,16 +489,13 @@ ul {
 	padding: 10px 0;
 	font-size: 16px;
 	color: var(--text-black-900);
-	letter-spacing: 2px;
-	text-transform: uppercase;
+	/* letter-spacing: 2px; */
 	border-bottom: 1px solid var(--bg-black-50);
 }
 
 .info-item p span {
 	font-weight: 400;
 	font-size: 14px;
-	letter-spacing: 0px;
-	text-transform: none;
 }
 
 .info-container {
@@ -756,6 +767,8 @@ ul {
 	align-items: center;
 	margin-bottom: 4rem;
 	text-align: justify;
+	padding-bottom: 2rem;
+	border-bottom: 1px solid var(--grey);
 }
 
 .hobbie-text {
@@ -768,16 +781,18 @@ ul {
 
 .hobbie-text h2 {
 	color: var(--skin-color);
-	font-weight: 700;
+	font-weight: 600;
+	font-size: 1.6rem;
 	/* margin-top: 20px; */
 	margin-bottom: 10px;
 }
 
 .hobbie-text p {
 	color: var(--text-black-700);
-	line-height: 25px;
-	font-size: 15px;
-	font-weight: 500;
+	line-height: 1.2rem;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: .5px;
 }
 
 .hobbie-img {
@@ -805,6 +820,7 @@ ul {
 	color: var(--text-black-900);
 	text-align: center;
 	font-size: 15px;
+	letter-spacing: 5px;
 	margin-bottom: 60px;
 }
 
@@ -894,7 +910,8 @@ ul {
 	}
 
 	.home-container{
-		padding-top: 100	px !important;
+		padding-top: 60	px !important;
+		z-index: 10;
 	}
 
 	.aside {
