@@ -6,7 +6,7 @@
 	--bg-black-50: #e8dfec;
 	--text-black-900: #302e4d;
 	--text-black-700: #504e70;
-	--grey: rgb(199, 201, 202);
+	--grey: rgb(189, 189, 189);
 }
 
 body.dark {
@@ -819,14 +819,14 @@ ul {
 /* contact */
 
 .contact-title {
-	color: var(--skin-color);
+	color: var(--text-black-700);
 	text-align: center;
-	font-size: 25px;
+	font-size: 30px;
 	margin-bottom: 20px;
 }
 
 .contact-sub-title {
-	color: var(--text-black-900);
+	color: var(--grey);
 	text-align: center;
 	font-size: 15px;
 	letter-spacing: 5px;
