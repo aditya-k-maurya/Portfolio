@@ -737,7 +737,7 @@ ul {
 }
 
 .portfolio-item {
-	flex: 0 0 33.33%;
+	flex: 1 0 33.33%;
 	max-width: 33.33%;
 	margin-bottom: 30px;
 	height: auto;
@@ -781,19 +781,21 @@ ul {
 .portfolio-item-tags {
 	display: flex;
 	gap: 8px;
+	row-gap: 10px;
 	flex-wrap: wrap;
 	margin-top: 10px;
+	margin-bottom: 1.5rem;
+
 }
 
-.portfolio li {
+.portfolio-item-tags li {
 	background-color: var(--bg-black-900);
 
 	padding: 3px 8px;
 	border-radius: 20px;
 	/* border:1px solid var(--text-black-700); */
-	font-size: 12px;
+	font-size: 11px;
 	color: var(--text-black-700);
-	margin-bottom: 1.5rem;
 }
 
 .portfolio-tag-main {
