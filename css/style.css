@@ -519,50 +519,30 @@ ul {
 	flex: 0 0 40%;
 	max-width: 40%;
 	margin-top: 40px;
+
 }
 
-.skill-item {
-	flex: 0 0 100%;
-	max-width: 100%;
+.skills h2{
+	font-size: 1.4rem;
+	color: var(--text-black-900);
+	margin-bottom: .7rem;
 }
 
-.skill-item h5 {
-	line-height: 20px;
+.skill-list{
+	display: flex;
+	gap:8px;
+	flex-wrap:wrap;
+}
+
+.skill-list li{
+	background-color: var(--text-black-900);
+
+	padding: 5px 12px;
+	border-radius: 20px;
+	border:1px solid var(--text-black-700);
+	font-size: 14px;
 	font-weight: 600;
-	font-size: 16px;
-	padding-bottom: 10px;
-	color: var(--text-black-900);
-	text-transform: capitalize;
-}
-
-.progress {
-	background-color: var(--bg-black-50);
-	height: 7px;
-	border-radius: 4px;
-	width: 100%;
-	position: relative;
-}
-
-.skill-item {
-	margin-bottom: 20px;
-}
-
-.progress-in {
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	border-radius: 4px;
-	background-color: var(--skin-color);
-}
-
-.skill-percent {
-	position: absolute;
-	right: 0;
-	color: var(--text-black-900);
-	top: -40px;
-	font-weight: 400;
-	line-height: 40px;
+	color: var(--bg-black-900);
 }
 
 .education,
