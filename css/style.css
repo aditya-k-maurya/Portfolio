@@ -541,8 +541,14 @@ ul {
 	border-radius: 20px;
 	border:1px solid var(--text-black-700);
 	font-size: 14px;
-	font-weight: 600;
+	font-weight: 500;
 	color: var(--bg-black-900);
+	cursor: pointer;
+	transition: all .3s ease;
+}
+
+.skill-list li:hover{
+	transform: scale(1.08);
 }
 
 .education,
