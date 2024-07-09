@@ -8,6 +8,9 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
+			animation: {
+				"spin-slow": "spin 2.4s linear infinite", // Adjust duration as needed
+			},
 			fontFamily: {
 				sans: ["Poppins", "sans-serif"],
 				clicker: ['"Clicker Script"', "cursive"],

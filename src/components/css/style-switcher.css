@@ -30,10 +30,13 @@
 	cursor: pointer;
 	transition: all 0.3s ease;
 	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.s-icon i {
-	line-height: 40px;
+.s-icon img{
+	filter: opacity(.8);
 }
 
 .style-switcher-toggler {
@@ -79,4 +82,8 @@
 }
 .color-5 {
 	background: #f021b2;
+}
+
+.animate-spin{
+	transition: spin 2s linear infinite !important;
 }
