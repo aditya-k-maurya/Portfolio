@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 
 function Navbar() {
 	const pathname = usePathname();
-	console.log(pathname);
 	return (
 		<>
 			<div className="nav-toggler">
@@ -25,7 +24,6 @@ function Navbar() {
 							<img
 								className="w-[16px] inline mr-[8px]"
 								src="/icon/house-solid.svg"
-								alt=""
 							/>
 							Home
 						</Link>
