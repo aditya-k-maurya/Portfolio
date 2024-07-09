@@ -1,41 +1,91 @@
-import React from 'react'
-import './css/style.css'
+"use client";
+import React from "react";
+import "./css/style.css";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 function Navbar() {
-  return (
-    <>
+	const pathname = usePathname();
+	console.log(pathname);
+	return (
+		<>
 			<div className="nav-toggler">
 				<span></span>
 			</div>
 			<div className="aside">
 				<div className="logo">
-					<a href="#"><span>A</span>ditya</a>
+					<Link href="/">
+						<span>A</span>ditya
+					</Link>
 				</div>
 
 				<ul className="nav">
 					<li>
-						<a href="#home" className="active"><i className="fa fa-home"></i>Home</a>
+						<Link href="/home" className={pathname == "/" ? "active" : ""}>
+							<img
+								className="w-[16px] inline mr-[8px]"
+								src="/icon/house-solid.svg"
+								alt=""
+							/>
+							Home
+						</Link>
 					</li>
 					<li>
-						<a href="#about"><i className="fa fa-user"></i>About</a>
+						<Link
+							href="/about"
+							className={pathname == "/about" ? "active" : ""}>
+							<img
+								className="w-[14px] inline mr-[8px]"
+								src="/icon/user-solid.svg"
+								alt=""
+							/>
+							About
+						</Link>
 					</li>
 
 					<li>
-						<a href="#portfolio"><i className="fa fa-briefcase"></i>Portfolio</a>
+						<Link
+							href="/portfolio"
+							className={pathname == "/portfolio" ? "active" : ""}>
+							<img
+								className="w-[14px] inline mr-[8px]"
+								src="/icon/briefcase-solid.svg"
+								alt=""
+							/>
+							Portfolio
+						</Link>
 					</li>
-				 {/* <li>
+					{/* <li>
 						<a href="#services"><i className="fa fa-list"></i>Services</a>
 					</li>  */}
 					<li>
-						<a href="#hobbies"><i className="fa-solid fa-heart"></i>Hobbies</a>
+						<Link
+							href="/hobbies"
+							className={pathname == "/hobbies" ? "active" : ""}>
+							<img
+								className="w-[14px] inline mr-[8px]"
+								src="/icon/heart-solid.svg"
+								alt=""
+							/>
+							Hobbies
+						</Link>
 					</li>
 					<li>
-						<a href="#contact"><i className="fa fa-comments"></i>Contact</a>
+						<Link
+							href="/contact"
+							className={pathname == "/contact" ? "active" : ""}>
+							<img
+								className="w-[14px] inline mr-[8px]"
+								src="/icon/comment-solid.svg"
+								alt=""
+							/>
+							Contact
+						</Link>
 					</li>
 				</ul>
 			</div>
-    </>
-  )
+		</>
+	);
 }
 
-export default Navbar
+export default Navbar;
