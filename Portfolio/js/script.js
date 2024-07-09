@@ -1,12 +1,6 @@
 //  typing animation
 var typed = new Typed(".typing", {
-	strings: [
-		"",
-		"Web Developer",
-		"Graphic Designer",
-		"Programmer",
-		"Awesome"
-	],
+	strings: ["", "Web Developer", "Graphic Designer", "Programmer", "Awesome"],
 	typeSpeed: 100,
 	backSpeed: 60,
 	loop: true,
@@ -25,61 +19,61 @@ const navTogglerBtn = document.querySelector(".nav-toggler");
 for (let i = 0; i < totalNavList; i++) {
 	const a = navList[i].querySelector("a");
 	a.addEventListener("click", function () {
-    removeBackSection();
+		removeBackSection();
 
-		if (aside.classList.contains("open")) {
-			aside.classList.remove("open");
-			navTogglerBtn.classList.remove("open");
+		if (aside.classNameList.contains("open")) {
+			aside.classNameList.remove("open");
+			navTogglerBtn.classNameList.remove("open");
 		}
 
 		for (let j = 0; j < totalNavList; j++) {
-      if (navList[j].querySelector("a").classList.contains("active")) {
-        addBackSection(j)
-				// allSection[j].classList.add("back-section");
+			if (navList[j].querySelector("a").classNameList.contains("active")) {
+				addBackSection(j);
+				// allSection[j].classNameList.add("back-section");
 			}
-			navList[j].querySelector("a").classList.remove("active");
+			navList[j].querySelector("a").classNameList.remove("active");
 		}
-		this.classList.add("active");
+		this.classNameList.add("active");
 		showSection(this);
 	});
 }
 
 function updateNav(element) {
 	for (let i = 0; i < totalNavList; i++) {
-		navList[i].querySelector("a").classList.remove("active");
+		navList[i].querySelector("a").classNameList.remove("active");
 		const target = element.getAttribute("href").split("#")[1];
 		if (
 			target ===
 			navList[i].querySelector("a").getAttribute("href").split("#")[1]
 		) {
-			navList[i].querySelector("a").classList.add("active");
+			navList[i].querySelector("a").classNameList.add("active");
 		}
 	}
 }
 
 function removeBackSection() {
-  for (let i = 0; i < totalSection; i++) {
-		allSection[i].classList.remove("back-section");
+	for (let i = 0; i < totalSection; i++) {
+		allSection[i].classNameList.remove("back-section");
 	}
 }
 
 function addBackSection(num) {
-  allSection[num].classList.add("back-section");
+	allSection[num].classNameList.add("back-section");
 }
 
 document.querySelector(".hire-me").addEventListener("click", function () {
-  const sectionIndex = this.getAttribute("data-section-index");
+	const sectionIndex = this.getAttribute("data-section-index");
 	showSection(this);
-  updateNav(this);
-  addBackSection(sectionIndex)
+	updateNav(this);
+	addBackSection(sectionIndex);
 });
 
 function showSection(element) {
 	for (let i = 0; i < totalSection; i++) {
-		allSection[i].classList.remove("active");
+		allSection[i].classNameList.remove("active");
 	}
 	const target = element.getAttribute("href").split("#")[1];
-	document.querySelector("#" + target).classList.add("active");
+	document.querySelector("#" + target).classNameList.add("active");
 }
 
 navTogglerBtn.addEventListener("click", () => {
@@ -87,6 +81,6 @@ navTogglerBtn.addEventListener("click", () => {
 });
 
 function asideSectionTogglerBtn() {
-	aside.classList.toggle("open");
-	navTogglerBtn.classList.toggle("open");
+	aside.classNameList.toggle("open");
+	navTogglerBtn.classNameList.toggle("open");
 }
