@@ -8,7 +8,7 @@ function page() {
 						<div className="row">
 							<div className="section-title padd-15">
 								<h2>Portfolio</h2>
-								<div className="animation">
+								<div className="animate-gif">
 									<img
 										className="wow-reaction"
 										src="assets/wow-reaction-unscreen.gif"

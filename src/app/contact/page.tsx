@@ -8,7 +8,7 @@ function page() {
 				<div className="row">
 					<div className="section-title padd-15">
 						<h2>Contact Me</h2>
-						<div className="animation">
+						<div className="animate-gif">
 							<img
 								className="dog-call"
 								src="assets/dogcall-unscreen.gif"

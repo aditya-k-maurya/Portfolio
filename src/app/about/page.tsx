@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 
 function page() {
@@ -7,9 +7,9 @@ function page() {
 			<div className="container">
 				<div className="row">
 					<div className="section-title padd-15">
-						<h2>About Me</h2>
-						<div className="animation">
-							<img className="chill-cat" src="assets/cat-vibe.gif" alt="" />
+						<h2>About Me</h2> 
+						<div className="animate-gif">
+							<img className="chill-cat" src="assets/cat-vibe.gif" alt="gif" />
 						</div>
 					</div>
 				</div>

@@ -1,14 +1,34 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import "./css/style.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 function Navbar() {
 	const pathname = usePathname();
+
+function handleToggle() {
+	const navToggler = document.querySelector(".nav-toggler");
+	const aside = document.querySelector(".aside");
+
+	if (aside?.classList.contains("open")) {
+		aside.classList.remove("open");
+		navToggler?.classList.remove("open");
+	} else {
+		aside?.classList.add("open");
+		navToggler?.classList.add("open");
+	}
+}
+    useEffect(() => {
+			if (window.innerWidth < 1200) {
+				handleToggle();
+			}
+		}, [pathname]);
+
+	
 	return (
 		<>
-			<div className="nav-toggler">
+			<div className="nav-toggler" onClick={handleToggle}>
 				<span></span>
 			</div>
 			<div className="aside">

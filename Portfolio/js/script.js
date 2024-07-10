@@ -1,5 +1,3 @@
-
-
 // =============== Aside ================================
 const nav = document.querySelector(".nav"),
 	navList = nav.querySelectorAll("li"),
@@ -15,44 +13,44 @@ for (let i = 0; i < totalNavList; i++) {
 	a.addEventListener("click", function () {
 		removeBackSection();
 
-		if (aside.classNameList.contains("open")) {
-			aside.classNameList.remove("open");
-			navTogglerBtn.classNameList.remove("open");
+		if (aside.classList.contains("open")) {
+			aside.classList.remove("open");
+			navTogglerBtn.classList.remove("open");
 		}
 
 		for (let j = 0; j < totalNavList; j++) {
-			if (navList[j].querySelector("a").classNameList.contains("active")) {
+			if (navList[j].querySelector("a").classList.contains("active")) {
 				addBackSection(j);
-				// allSection[j].classNameList.add("back-section");
+				// allSection[j].classList.add("back-section");
 			}
-			navList[j].querySelector("a").classNameList.remove("active");
+			navList[j].querySelector("a").classList.remove("active");
 		}
-		this.classNameList.add("active");
+		this.classList.add("active");
 		showSection(this);
 	});
 }
 
 function updateNav(element) {
 	for (let i = 0; i < totalNavList; i++) {
-		navList[i].querySelector("a").classNameList.remove("active");
+		navList[i].querySelector("a").classList.remove("active");
 		const target = element.getAttribute("href").split("#")[1];
 		if (
 			target ===
 			navList[i].querySelector("a").getAttribute("href").split("#")[1]
 		) {
-			navList[i].querySelector("a").classNameList.add("active");
+			navList[i].querySelector("a").classList.add("active");
 		}
 	}
 }
 
 function removeBackSection() {
 	for (let i = 0; i < totalSection; i++) {
-		allSection[i].classNameList.remove("back-section");
+		allSection[i].classList.remove("back-section");
 	}
 }
 
 function addBackSection(num) {
-	allSection[num].classNameList.add("back-section");
+	allSection[num].classList.add("back-section");
 }
 
 document.querySelector(".hire-me").addEventListener("click", function () {
@@ -64,10 +62,10 @@ document.querySelector(".hire-me").addEventListener("click", function () {
 
 function showSection(element) {
 	for (let i = 0; i < totalSection; i++) {
-		allSection[i].classNameList.remove("active");
+		allSection[i].classList.remove("active");
 	}
 	const target = element.getAttribute("href").split("#")[1];
-	document.querySelector("#" + target).classNameList.add("active");
+	document.querySelector("#" + target).classList.add("active");
 }
 
 navTogglerBtn.addEventListener("click", () => {
@@ -75,6 +73,6 @@ navTogglerBtn.addEventListener("click", () => {
 });
 
 function asideSectionTogglerBtn() {
-	aside.classNameList.toggle("open");
-	navTogglerBtn.classNameList.toggle("open");
+	aside.classList.toggle("open");
+	navTogglerBtn.classList.toggle("open");
 }

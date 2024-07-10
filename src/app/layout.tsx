@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -8,6 +8,13 @@ import "@/components/css/style-switcher.css";
 import "@/components/css/animation.css";
 import Head from "next/head";
 import { ModeProvider, useMode } from "@/context/ModeContext";
+import type { Metadata } from "next";
+import ThemeSwitch from "@/components/ThemeSwitch";
+
+export const metadata: Metadata = {
+	title: "Aditya | Portfolio",
+	description: "This is my personal profile website, I hope you like it :) ",
+};
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,22 +23,16 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
-	return (
-		<ModeProvider>
-			<Content>{children}</Content>
-		</ModeProvider>
-	);
+
+	return <Content>{children}</Content>;
 }
 
 function Content({ children }: { children: React.ReactNode }) {
-	let { mode } = useMode();
-
+	
 	return (
+		
 		<html lang="en">
 			<Head>
-				<title>Aditya | Portfolio</title>
-
-
 				{/* Favicons */}
 				<link
 					rel="apple-touch-icon"
@@ -63,11 +64,14 @@ function Content({ children }: { children: React.ReactNode }) {
 					rel="stylesheet"
 				/>
 			</Head>
-			<body className={`${inter.className} ${mode}`}>
-				<Navbar />
-				{children}
-				<StyleSwitch />
-			</body>
+			<ModeProvider>
+				<body className={`${inter.className}`}>
+					<Navbar />
+					{children}
+					<StyleSwitch />
+					<ThemeSwitch/>
+				</body>
+			</ModeProvider>
 		</html>
 	);
 }

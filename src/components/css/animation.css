@@ -1,11 +1,9 @@
-.animation {
+.animate-gif {
 	z-index: 100;
-	/* width: 8rem; */
-	position: relative;
 }
 
-.animation img {
-	position: absolute;
+.animate-gif img {
+	position: relative;
 	filter: brightness(150%);
 }
 
