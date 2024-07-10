@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+"use client";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -8,13 +8,9 @@ import "@/components/css/skins/color-1.css";
 import "@/components/css/style-switcher.css";
 import "@/components/css/animation.css";
 import Head from "next/head";
+import { ModeProvider, useMode } from "@/context/ModeContext";
 
 const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-	title: "Aditya | Portfolio",
-	description: "This is my personal portfolio website. I hope you like it :) ",
-};
 
 export default function RootLayout({
 	children,
@@ -22,8 +18,20 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
+		<ModeProvider>
+			<Content>{children}</Content>
+		</ModeProvider>
+	);
+}
+
+function Content({ children }: { children: React.ReactNode }) {
+	let { mode } = useMode();
+
+	return (
 		<html lang="en">
 			<Head>
+				<title>Aditya | Portfolio</title>
+
 				{/* FontAwesome */}
 				<link
 					rel="stylesheet"
@@ -64,12 +72,11 @@ export default function RootLayout({
 					rel="stylesheet"
 				/>
 			</Head>
-			<body className={inter.className}>
+			<body className={`${inter.className} ${mode}`}>
 				<Navbar />
 				{children}
 				<StyleSwitch />
 			</body>
-
 		</html>
 	);
 }

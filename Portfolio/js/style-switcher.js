@@ -2,18 +2,6 @@
 
 const styleSwitcherToggle = document.querySelector(".style-switcher-toggler");
 
-const styleSwitcher = document.querySelector(".style-switcher");
-
-styleSwitcherToggle.addEventListener("click", () => {
-	styleSwitcher.classNameList.toggle("open");
-});
-
-// ================ hide style switcher on scroll ===================
-window.addEventListener("scroll", () => {
-	if (styleSwitcher.classNameList.contains("open")) {
-		styleSwitcher.classNameList.remove("open");
-	}
-});
 
 //================ theme colors ================
 
