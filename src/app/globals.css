@@ -22,6 +22,8 @@
 	--text-black-900: #302e4d;
 	--text-black-700: #504e70;
 	--grey: rgb(189, 189, 189);
+  --skin-color: #1854b4;
+
 }
 
 body.dark {
@@ -61,4 +63,3 @@ ul {
     text-wrap: balance;
   }
 }
-

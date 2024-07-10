@@ -22,7 +22,7 @@ function Navbar() {
 					<li>
 						<Link href="/home" className={pathname == "/" ? "active" : ""}>
 							<img
-								className="w-[16px] inline mr-[8px]"
+								className="w-[16px] fa-icon inline mr-[8px]"
 								src="/icon/house-solid.svg"
 							/>
 							Home
@@ -33,7 +33,7 @@ function Navbar() {
 							href="/about"
 							className={pathname == "/about" ? "active" : ""}>
 							<img
-								className="w-[14px] inline mr-[8px]"
+								className="w-[14px] fa-icon inline mr-[8px]"
 								src="/icon/user-solid.svg"
 								alt=""
 							/>
@@ -46,7 +46,7 @@ function Navbar() {
 							href="/portfolio"
 							className={pathname == "/portfolio" ? "active" : ""}>
 							<img
-								className="w-[14px] inline mr-[8px]"
+								className="w-[14px] fa-icon inline mr-[8px]"
 								src="/icon/briefcase-solid.svg"
 								alt=""
 							/>
@@ -61,7 +61,7 @@ function Navbar() {
 							href="/hobbies"
 							className={pathname == "/hobbies" ? "active" : ""}>
 							<img
-								className="w-[14px] inline mr-[8px]"
+								className="w-[14px] fa-icon inline mr-[8px]"
 								src="/icon/heart-solid.svg"
 								alt=""
 							/>
@@ -73,7 +73,7 @@ function Navbar() {
 							href="/contact"
 							className={pathname == "/contact" ? "active" : ""}>
 							<img
-								className="w-[14px] inline mr-[8px]"
+								className="w-[14px] fa-icon inline mr-[8px]"
 								src="/icon/comment-solid.svg"
 								alt=""
 							/>
