@@ -10,6 +10,7 @@ import Head from "next/head";
 import { ModeProvider, useMode } from "@/context/ModeContext";
 import type { Metadata } from "next";
 import ThemeSwitch from "@/components/ThemeSwitch";
+import { ActiveSectionProvider } from "@/context/ActiveSectionContext";
 
 export const metadata: Metadata = {
 	title: "Aditya | Portfolio",
@@ -23,14 +24,11 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
-
 	return <Content>{children}</Content>;
 }
 
 function Content({ children }: { children: React.ReactNode }) {
-	
 	return (
-		
 		<html lang="en">
 			<Head>
 				{/* Favicons */}
@@ -65,12 +63,14 @@ function Content({ children }: { children: React.ReactNode }) {
 				/>
 			</Head>
 			<ModeProvider>
-				<body className={`${inter.className}`}>
-					<Navbar />
-					{children}
-					<StyleSwitch />
-					<ThemeSwitch/>
-				</body>
+				<ActiveSectionProvider>
+					<body className={`${inter.className}`}>
+						<Navbar />
+						{children}
+						<StyleSwitch />
+						<ThemeSwitch />
+					</body>
+				</ActiveSectionProvider>
 			</ModeProvider>
 		</html>
 	);

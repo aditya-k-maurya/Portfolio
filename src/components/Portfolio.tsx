@@ -1,9 +1,11 @@
 "use client";
 import React from "react";
 
-function page() {
+function Portfolio({section}:any) {
 	return (
-		<section className="portfolio section active" id="portfolio">
+		<section
+			className={`portfolio section ${section === "portfolio" ? "active" : ""}`}
+			id="portfolio">
 			<div className="container">
 				<div className="row">
 					<div className="section-title padd-15">
@@ -314,4 +316,4 @@ function page() {
 	);
 }
 
-export default page;
+export default Portfolio;

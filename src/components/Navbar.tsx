@@ -3,29 +3,35 @@ import React, { useEffect } from "react";
 import "./css/style.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useActiveSection } from "@/context/ActiveSectionContext";
 
 function Navbar() {
 	const pathname = usePathname();
+	const { activeSection, setActiveSection } = useActiveSection();
 
-function handleToggle() {
-	const navToggler = document.querySelector(".nav-toggler");
-	const aside = document.querySelector(".aside");
+	function handleToggle() {
+		const navToggler = document.querySelector(".nav-toggler");
+		const aside = document.querySelector(".aside");
 
-	if (aside?.classList.contains("open")) {
-		aside.classList.remove("open");
-		navToggler?.classList.remove("open");
-	} else {
-		aside?.classList.add("open");
-		navToggler?.classList.add("open");
+		if (aside?.classList.contains("open")) {
+			aside.classList.remove("open");
+			navToggler?.classList.remove("open");
+		} else {
+			aside?.classList.add("open");
+			navToggler?.classList.add("open");
+		}
 	}
-}
-    useEffect(() => {
-			if (window.innerWidth < 1200) {
-				handleToggle();
-			}
-		}, [pathname]);
 
-	
+	function handleSection(section: string) {
+		setActiveSection(section)
+	}
+
+	useEffect(() => {
+		if (window.innerWidth < 1200) {
+			handleToggle();
+		}
+	}, [pathname]);
+
 	return (
 		<>
 			<div className="nav-toggler" onClick={handleToggle}>
@@ -33,72 +39,89 @@ function handleToggle() {
 			</div>
 			<div className="aside">
 				<div className="logo">
-					<Link href="/">
+					<a href="/">
 						<span>A</span>ditya
-					</Link>
+					</a>
 				</div>
 
 				<ul className="nav">
 					<li>
-						<Link href="/home" className={pathname == "/" ? "active" : ""}>
+						<a
+							href="#home"
+							onClick={() => {
+								handleSection("home");
+							}}
+							className={activeSection == "home" ? "active" : ""}>
 							<img
 								className="w-[16px] fa-icon inline mr-[8px]"
 								src="/icon/house-solid.svg"
 							/>
 							Home
-						</Link>
+						</a>
 					</li>
 					<li>
-						<Link
-							href="/about"
-							className={pathname == "/about" ? "active" : ""}>
+						<a
+							href="#about"
+							onClick={() => {
+								handleSection("about");
+							}}
+							className={activeSection == "about" ? "active" : ""}>
 							<img
 								className="w-[14px] fa-icon inline mr-[8px]"
 								src="/icon/user-solid.svg"
 								alt=""
 							/>
 							About
-						</Link>
+						</a>
 					</li>
 
 					<li>
-						<Link
-							href="/portfolio"
-							className={pathname == "/portfolio" ? "active" : ""}>
+						<a
+							href="#portfolio"
+							onClick={() => {
+								handleSection("portfolio");
+							}}
+							className={activeSection == "portfolio" ? "active" : ""}>
 							<img
 								className="w-[14px] fa-icon inline mr-[8px]"
 								src="/icon/briefcase-solid.svg"
 								alt=""
 							/>
 							Portfolio
-						</Link>
+						</a>
 					</li>
 					{/* <li>
 						<a href="#services"><i className="fa fa-list"></i>Services</a>
 					</li>  */}
 					<li>
-						<Link
-							href="/hobbies"
-							className={pathname == "/hobbies" ? "active" : ""}>
+						<a
+							href="#hobbies"
+							onClick={() => {
+								handleSection("hobbies");
+							}}
+							className={activeSection == "hobbies" ? "active" : ""}>
 							<img
 								className="w-[14px] fa-icon inline mr-[8px]"
 								src="/icon/heart-solid.svg"
 								alt=""
 							/>
 							Hobbies
-						</Link>
+						</a>
 					</li>
 					<li>
-						<Link
-							href="/contact"
-							className={pathname == "/contact" ? "active" : ""}>
+						<a
+							href="#contact"
+							onClick={() => {
+								handleSection("contact");
+							}}
+							className={activeSection == "contact" ? "active" : ""}>
 							<img
 								className="w-[14px] fa-icon inline mr-[8px]"
 								src="/icon/comment-solid.svg"
 								alt=""
 							/>
 							Contact
-						</Link>
+						</a>
 					</li>
 				</ul>
 			</div>
