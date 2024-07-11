@@ -1,10 +1,12 @@
 "use client";
 import React from "react";
 
-function Contact({ section }: any) {
+function Contact({ section,backSection }: any) {
 	return (
 		<section
-			className={`contact section ${section === "contact" ? "active" : ""}`}
+			className={`contact section ${section === "contact" ? "active" : ""} ${
+				backSection === "contact" ? "back-section" : ""
+			}`}
 			id="contact">
 			<div className="container">
 				<div className="row">

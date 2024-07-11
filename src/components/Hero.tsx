@@ -2,10 +2,12 @@
 import React from "react";
 import { Typewriter, Cursor } from "react-simple-typewriter"; // Ensure correct import
 
-function Hero({section}:any) {
+function Hero({section,backSection}:any) {
 	return (
 		<div
-			className={`home section ${section === "home" ? "active" : ""}`}
+			className={`home section ${section === "home" ? "active" : ""} ${
+				backSection === "home" ? "back-section" : ""
+			}`}
 			id="home">
 			<div className="container home-container">
 				<div className="row">

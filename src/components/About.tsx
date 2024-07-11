@@ -2,10 +2,10 @@
 import React from "react";
 
 
-function About({ section }:any) {
+function About({ section, backSection }:any) {
   
 	return (
-		<div className= {` about section ${section==="about"?"active":""}`} id="about">
+		<div className= {` about section ${section==="about"?"active":""} ${backSection==="about"?"back-section":""}`} id="about">
 			<div className="container">
 				<div className="row">
 					<div className="section-title padd-15">

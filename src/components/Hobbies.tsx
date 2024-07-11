@@ -1,10 +1,12 @@
 "use client";
 import React from "react";
 
-function Hobbies({section}:any) {
+function Hobbies({section,backSection}:any) {
 	return (
 		<div
-			className={`hobbies section ${section === "hobbies" ? "active" : ""}`}
+			className={`hobbies section ${section === "hobbies" ? "active" : ""} ${
+				backSection === "hobbies" ? "back-section" : ""
+			}`}
 			id="hobbies">
 			<div className="container">
 				<div className="row">

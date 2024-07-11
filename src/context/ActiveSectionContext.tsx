@@ -4,6 +4,8 @@ import React, { createContext, useState, useContext, ReactNode } from "react";
 type ActiveSectionContextType = {
 	activeSection: string;
 	setActiveSection: (section: string) => void;
+	backSection: string;
+	setBackSection: (section: string) => void;
 };
 
 const ActiveSectionContext = createContext<
@@ -15,10 +17,11 @@ export const ActiveSectionProvider = ({
 }: {
 	children: ReactNode;
 }) => {
-	const [activeSection, setActiveSection] = useState<string>("home");
+  const [activeSection, setActiveSection] = useState<string>("home");
+  const [backSection, setBackSection] = useState<string>("contact");
 
 	return (
-		<ActiveSectionContext.Provider value={{ activeSection, setActiveSection }}>
+		<ActiveSectionContext.Provider value={{ activeSection, setActiveSection, backSection, setBackSection }}>
 			{children}
 		</ActiveSectionContext.Provider>
 	);

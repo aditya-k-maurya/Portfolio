@@ -8,6 +8,7 @@ import { useActiveSection } from "@/context/ActiveSectionContext";
 function Navbar() {
 	const pathname = usePathname();
 	const { activeSection, setActiveSection } = useActiveSection();
+	const { setBackSection } = useActiveSection();
 
 	function handleToggle() {
 		const navToggler = document.querySelector(".nav-toggler");
@@ -23,6 +24,7 @@ function Navbar() {
 	}
 
 	function handleSection(section: string) {
+		setBackSection(activeSection)
 		setActiveSection(section)
 	}
 

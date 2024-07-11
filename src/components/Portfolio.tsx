@@ -1,10 +1,12 @@
 "use client";
 import React from "react";
 
-function Portfolio({section}:any) {
+function Portfolio({section, backSection}:any) {
 	return (
 		<section
-			className={`portfolio section ${section === "portfolio" ? "active" : ""}`}
+			className={`portfolio section ${
+				section === "portfolio" ? "active" : ""
+			} ${backSection === "portfolio" ? "back-section" : ""}`}
 			id="portfolio">
 			<div className="container">
 				<div className="row">
