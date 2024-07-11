@@ -40,10 +40,10 @@ function Hobbies({section,backSection}:any) {
 						<div className="hobbie-text">
 							<h2>Competitive programming</h2>
 							<p>
-								One thing learned from Competitive programming is that you can't
-								learn to code unless you start using your own brain to reach the
-								solution. Currently holding 1600+ rating on Codechef and
-								progressively improving.
+								One thing learned from Competitive programming is that you
+								can&apos;t learn to code unless you start using your own brain
+								to reach the solution. Currently holding 1600+ rating on
+								Codechef and progressively improving.
 							</p>
 						</div>
 						<div className="hobbie-img">

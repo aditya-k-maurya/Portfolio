@@ -5,7 +5,11 @@ import React from "react";
 function About({ section, backSection }:any) {
   
 	return (
-		<div className= {` about section ${section==="about"?"active":""} ${backSection==="about"?"back-section":""}`} id="about">
+		<div
+			className={` about section ${section === "about" ? "active" : ""} ${
+				backSection === "about" ? "back-section" : ""
+			}`}
+			id="about">
 			<div className="container">
 				<div className="row">
 					<div className="section-title padd-15">
@@ -21,14 +25,15 @@ function About({ section, backSection }:any) {
 						<div className="row">
 							<div className="about-text padd-15">
 								<h3>
-									I'm <span>Aditya</span> Kumar Maurya and
+									I&apos;m <span>Aditya</span> Kumar Maurya and
 									<span>Web Developer</span>
 								</h3>
 								<p>
 									I am guy who believes in living life with a ideology
-									<strong>"stay hungry, stay foolish"</strong>. Believes in keep
-									learning and keep yourself open to new experiences. At the end
-									I want to say I want to create something which can bring
+									<strong>&quot;stay hungry, stay foolish&quot;</strong>.
+									Believes in keep learning and keep yourself open to new
+									experiences. At the end I want to say I want to create
+									something which can bring
 									<strong>
 										smiles on faces and can connect with the hearts of people
 									</strong>

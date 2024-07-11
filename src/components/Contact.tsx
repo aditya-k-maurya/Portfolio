@@ -23,7 +23,7 @@ function Contact({ section,backSection }: any) {
 				</div>
 
 				<h3 className="contact-title padd-15">Have any questions?</h3>
-				<h4 className="contact-sub-title padd-15">I'M AT YOUR SERVICE</h4>
+				<h4 className="contact-sub-title padd-15">I&apos;M AT YOUR SERVICE</h4>
 
 				<div className="row">
 					{/* <!-- ======Contact info item ======= --> */}
@@ -65,7 +65,7 @@ function Contact({ section,backSection }: any) {
 
 				<h3 className="contact-title padd-15">SEND ME AN EMAIL</h3>
 				<h4 className="contact-sub-title padd-15">
-					I'M VERY RESPOSIVE TO MESSAGES
+					I&apos;M VERY RESPOSIVE TO MESSAGES
 				</h4>
 
 				{/* <!-- ===== Contact form ===== --> */}
