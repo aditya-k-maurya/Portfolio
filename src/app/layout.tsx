@@ -57,10 +57,8 @@ function Content({ children }: { children: React.ReactNode }) {
 				{/* Fonts */}
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
 				<link rel="preconnect" href="https://fonts.gstatic.com" />
-				<link
-					href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
-					rel="stylesheet"
-				/>
+				<link rel="preload" href="https://fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+
 			</Head>
 			<ModeProvider>
 				<ActiveSectionProvider>
