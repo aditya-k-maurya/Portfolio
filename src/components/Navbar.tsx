@@ -24,21 +24,15 @@ function Navbar() {
 	}
 
 	function handleSection(section: string) {
-		setBackSection(activeSection);
-		setActiveSection(section);
+		setBackSection(activeSection)
+		setActiveSection(section)
 	}
 
 	useEffect(() => {
 		if (window.innerWidth < 1200) {
-			const navToggler = document.querySelector(".nav-toggler");
-			const aside = document.querySelector(".aside");
-			
-			if (aside?.classList.contains("open")) {
-				aside.classList.remove("open");
-				navToggler?.classList.remove("open");
-			}
+			handleToggle();
 		}
-	}, [pathname]);
+	}, [activeSection]);
 
 	return (
 		<>

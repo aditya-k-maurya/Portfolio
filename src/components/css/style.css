@@ -368,6 +368,8 @@
 	height: 400px;
 	/* margin: auto; */
 	border-radius: 5px;
+	filter: saturate(.9) ;
+
 }
 
 .float-img {
