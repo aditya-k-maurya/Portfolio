@@ -36,8 +36,8 @@ function Portfolio({ section, backSection }: any) {
 				<div className="row">
 					{/* <!-- ===== Portfolio item ====== --> */}
 					{portfolioData.map((data) => (
-						<div className="portfolio-item padd-15">
-							<PortfolioItem data={data} key={data.id} />
+						<div key={data.id} className="portfolio-item padd-15">
+							<PortfolioItem data={data} />
 						</div>
 					))}
 				</div>
@@ -51,8 +51,8 @@ function Portfolio({ section, backSection }: any) {
 				<div className="row">
 					{/* <!-- ===== Portfolio item ====== --> */}
 					{portfolioFunData.map((data) => (
-						<div className="portfolio-item padd-15">
-							<PortfolioItem data={data} key={data.id} />
+						<div key={data.id} className="portfolio-item padd-15">
+							<PortfolioItem data={data} />
 						</div>
 					))}
 				</div>

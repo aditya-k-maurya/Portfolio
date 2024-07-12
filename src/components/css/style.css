@@ -974,10 +974,16 @@
 	}
 
 	.home-img {
-		margin-left: 50px;
+		/* margin-left: 50px; */
+		width: 100% ;
+		display: flex;
 		margin-bottom: 50px;
 		order: -1;
-		width: max-content;
+		justify-content: center;
+		/* width: max-content; */
+	}
+	.home-img img{
+		height: 350px;
 	}
 
 	.float-img {
@@ -1027,6 +1033,11 @@
 	.float-img img {
 		width: 60%;
 		margin: auto !important;
+	}
+
+	.hero-flex{
+		justify-content: center;
+		align-items: center;
 	}
 }
 

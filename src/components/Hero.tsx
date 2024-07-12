@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
-import { Typewriter, Cursor } from "react-simple-typewriter"; // Ensure correct import
-import { Button } from "./ui/moving-border";
+import { Typewriter, Cursor } from "react-simple-typewriter";
 
 function Hero({section,backSection}:any) {
 	return (
