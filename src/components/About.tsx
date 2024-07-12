@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
+import { useActiveSection } from "@/context/ActiveSectionContext";
 
-
-function About({ section, backSection }:any) {
-  
+function About({ section, backSection }: any) {
+	const {setActiveSection,setBackSection} = useActiveSection()
 	return (
 		<div
 			className={` about section ${section === "about" ? "active" : ""} ${
@@ -22,7 +22,7 @@ function About({ section, backSection }:any) {
 
 				<div className="row">
 					<div className="about-content padd-15">
-						<div className="row">
+						<div className="row flex-nowrap justify-between">
 							<div className="about-text padd-15">
 								<h3>
 									I&apos;m <span>Aditya</span> Kumar Maurya and
@@ -40,6 +40,9 @@ function About({ section, backSection }:any) {
 									.
 								</p>
 							</div>
+							{/* <div className="float-img">
+								<img src="/assets/profileimg2.png" alt="profile" />{" "}
+							</div> */}
 						</div>
 
 						<div className="row">
@@ -86,7 +89,7 @@ function About({ section, backSection }:any) {
 										<a
 											href="#contact"
 											className="btn hire-me"
-											data-section-index="1">
+											data-section-index="1" onClick={() => { setBackSection("about");  setActiveSection("contact")}}>
 											Hire me
 										</a>
 									</div>

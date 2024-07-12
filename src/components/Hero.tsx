@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { Typewriter, Cursor } from "react-simple-typewriter"; // Ensure correct import
+import { Button } from "./ui/moving-border";
 
 function Hero({section,backSection}:any) {
 	return (
@@ -10,18 +11,13 @@ function Hero({section,backSection}:any) {
 			}`}
 			id="home">
 			<div className="container home-container">
-				<div className="row">
+				<div className="row hero-flex">
 					<div className="home-info padd-15">
-						<div className="float-img">
-							<img src="/assets/profileimg2.png" alt="profile" />{" "}
-							{/* Adjust image path */}
-						</div>
-
 						<h3 className="hello">
 							<span className="name">Aditya </span>Maurya
 						</h3>
 						<h3 className="my-profession">
-							I'm a{" "}
+							I&apos;m a{" "}
 							<span className="typing">
 								<Typewriter
 									words={[
@@ -39,20 +35,20 @@ function Hero({section,backSection}:any) {
 							</span>
 						</h3>
 						<p>
-							Hey, I'm a Web Developer with extensive experience for over a
+							Hey, I&apos;m a Web Developer with extensive experience for over a
 							year. My expertise is to create websites, play with designs and
 							many more...
 						</p>
 						<a
 							href="/assets/resume.pdf"
 							download="aditya_resume.pdf"
-							className="btn">
-							Resume <i className="fa-solid fa-download"></i>
+							className="btn ">
+							Resume 
 						</a>
 					</div>
 
 					<div className="home-img padd-15">
-						<img src="/assets/profile.png" alt="profile" />{" "}
+						<img src="/assets/profile-im.png" alt="profile" />
 						{/* Adjust image path */}
 					</div>
 				</div>
