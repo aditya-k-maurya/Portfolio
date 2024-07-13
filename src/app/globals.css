@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -14,13 +12,6 @@
   }
 }
 
-@font-face {
-  font-family: 'Poppins';
-  src: url('https://fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
 
 :root {
 	--bg-black-900: #f2f2fc;
@@ -47,7 +38,7 @@ body.dark {
 	outline: none;
 	text-decoration: none;
 	box-sizing: border-box;
-	font-family: "Poppins", sans-serif;
+	/* font-family: "Poppins", sans-serif; */
 
 }
 

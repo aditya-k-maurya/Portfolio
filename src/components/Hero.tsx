@@ -1,14 +1,24 @@
 "use client";
 import React from "react";
 import { Typewriter, Cursor } from "react-simple-typewriter";
+import { SparklesCore } from "./ui/sparkles";
 
-function Hero({section,backSection}:any) {
+function Hero({section,backSection,theme}:any) {
 	return (
 		<div
 			className={`home section ${section === "home" ? "active" : ""} ${
 				backSection === "home" ? "back-section" : ""
 			}`}
 			id="home">
+			<SparklesCore
+				id="tsparticlesfullpage"
+				background="transparent"
+				minSize={0.6}
+				maxSize={1.4}
+				particleDensity={100}
+				className="w-full h-full absolute"
+				particleColor={theme === "dark" ? "#ffffff" : "#636363"}
+			/>
 			<div className="container home-container">
 				<div className="row hero-flex">
 					<div className="home-info padd-15">
@@ -42,7 +52,11 @@ function Hero({section,backSection}:any) {
 							href="/assets/resume.pdf"
 							download="aditya_resume.pdf"
 							className="btn ">
-							Resume 
+							Resume{" "}
+							<img
+								className="w-[18px] inline invert ml-2"
+								src="/icon/download-solid.svg"
+							/>
 						</a>
 					</div>
 

@@ -8,6 +8,7 @@ type Data = {
 	tags: string[];
 	image: string;
 	repository: string;
+	link: string;
 	status: string;
 };
 
@@ -18,12 +19,10 @@ type Props = {
 const PortfolioItem: React.FC<Props> = ({ data }) => {
 	return (
 		<div className="portfolio-item-inner shadow-dark">
-			<a
-				href="https://aditya-k-maurya.vercel.app/#home"
-				className="portfolio-img">
+			<a href={data.link} className="portfolio-img" target="_blank">
 				<img src={data.image} alt="" />
 			</a>
-			<div className="portfolio-item-content">
+			<div className="portfolio-item-content mt-4">
 				<h2 className="portfolio-item-heading">{data.title}</h2>
 				<ul className="portfolio-item-tags">
 					<li className="portfolio-tag-main">{data.tagMain}</li>

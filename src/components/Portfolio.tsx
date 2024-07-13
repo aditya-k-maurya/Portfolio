@@ -6,12 +6,14 @@ import {
 	portfolioFunData,
 } from "../../public/data/portfolioData";
 
-function Portfolio({ section, backSection }: any) {
+function Portfolio({ section, backSection,theme }: any) {
 	return (
 		<section
 			className={`portfolio section ${
 				section === "portfolio" ? "active" : ""
-			} ${backSection === "portfolio" ? "back-section" : ""}`}
+			} ${backSection === "portfolio" ? "back-section" : ""} ${
+				theme === "dark" ? "bg-grid-white/[0.06]" : "bg-grid-black/[0.06]"
+			}`}
 			id="portfolio">
 			<div className="container">
 				<div className="row">

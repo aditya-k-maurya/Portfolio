@@ -1,9 +1,9 @@
 "use client";
 import React, { useEffect } from "react";
 import "./css/style.css";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useActiveSection } from "@/context/ActiveSectionContext";
+import '@/components/css/font.css'
 
 function Navbar() {
 	const pathname = usePathname();
@@ -30,7 +30,13 @@ function Navbar() {
 
 	useEffect(() => {
 		if (window.innerWidth < 1200) {
-			handleToggle();
+			const navToggler = document.querySelector(".nav-toggler");
+			const aside = document.querySelector(".aside");
+
+			if (aside?.classList.contains("open")) {
+				aside.classList.remove("open");
+				navToggler?.classList.remove("open");
+			}
 		}
 	}, [activeSection]);
 

@@ -6,7 +6,7 @@ function Hobbies({section,backSection}:any) {
 		<div
 			className={`hobbies section ${section === "hobbies" ? "active" : ""} ${
 				backSection === "hobbies" ? "back-section" : ""
-			}`}
+			} `}
 			id="hobbies">
 			<div className="container">
 				<div className="row">

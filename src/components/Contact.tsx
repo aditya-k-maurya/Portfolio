@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { BackgroundBeams } from "./ui/background-beams";
 
 function Contact({ section,backSection }: any) {
 	return (
@@ -8,6 +9,7 @@ function Contact({ section,backSection }: any) {
 				backSection === "contact" ? "back-section" : ""
 			}`}
 			id="contact">
+			<BackgroundBeams />
 			<div className="container">
 				<div className="row">
 					<div className="section-title padd-15">

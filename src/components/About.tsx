@@ -89,7 +89,11 @@ function About({ section, backSection }: any) {
 										<a
 											href="#contact"
 											className="btn hire-me"
-											data-section-index="1" onClick={() => { setBackSection("about");  setActiveSection("contact")}}>
+											data-section-index="1"
+											onClick={() => {
+												setBackSection("about");
+												setActiveSection("contact");
+											}}>
 											Hire me
 										</a>
 									</div>
@@ -106,6 +110,7 @@ function About({ section, backSection }: any) {
 									<li>HTML</li>
 									<li>CSS</li>
 									<li>nodejs</li>
+									<li>nextjs</li>
 									<li>reactjs</li>
 									<li>expressjs</li>
 									<li>mongoDB</li>
