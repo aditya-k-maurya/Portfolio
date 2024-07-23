@@ -44,9 +44,7 @@ function Hero({section,backSection,theme}:any) {
 							</span>
 						</h3>
 						<p>
-							Hey, I&apos;m a Web Developer with extensive experience for over a
-							year. My expertise is to create websites, play with designs and
-							many more...
+							Hello, I&apos;m a guy who believes in work is workship, the more you work the more you realize the more you can work.
 						</p>
 						<a
 							href="/assets/resume.pdf"
