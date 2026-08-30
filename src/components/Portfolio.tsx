@@ -31,7 +31,7 @@ function Portfolio({ section, backSection,theme }: any) {
 
 				<div className="row">
 					<div className="portfolio-heading padd-15">
-						<h2>My last project:</h2>
+						<h2>My Latest Projects:</h2>
 					</div>
 				</div>
 

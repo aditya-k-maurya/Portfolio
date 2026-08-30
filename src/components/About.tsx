@@ -22,20 +22,20 @@ function About({ section, backSection }: any) {
 
 				<div className="row">
 					<div className="about-content padd-15">
-						<div className="row flex-nowrap justify-between">
+						<div className="row flex-nowrap justify-between mb-4">
 							<div className="about-text padd-15">
-								<h3>
-									I&apos;m <span>Aditya</span> Kumar Maurya and
-									<span>Web Developer</span>
-								</h3>
+								{/* <h3>
+									I&apos;m a {" "}
+									<span>Full Stack Developer</span>
+								</h3> */}
 								<p>
-									I am guy who believes in living life with a ideology
-									<strong>&quot;stay hungry, stay foolish&quot;</strong>.
-									Believes in keep learning and keep yourself open to new
-									experiences. At the end I want to say I want to create
-									something which can bring
+									I live by the philosophy{" "}
+									<strong>&quot;stay hungry, stay foolish&quot;</strong> — always
+									curious, always growing. I believe in staying open to new
+									experiences and pushing my boundaries with every project. My
+									goal is to build things that{" "}
 									<strong>
-										smiles on faces and can connect with the hearts of people
+										create real impact and genuinely connect with people
 									</strong>
 									.
 								</p>
@@ -47,7 +47,7 @@ function About({ section, backSection }: any) {
 
 						<div className="row">
 							<div className="personal-info padd-15">
-								<div className="row info-container">
+								{/* <div className="row info-container">
 									<div className="info-item padd-15">
 										<p>
 											Birthday : <span>10 March 2003</span>
@@ -56,7 +56,7 @@ function About({ section, backSection }: any) {
 
 									<div className="info-item padd-15">
 										<p>
-											Age : <span>21</span>
+											Age : <span>23</span>
 										</p>
 									</div>
 
@@ -83,8 +83,8 @@ function About({ section, backSection }: any) {
 											Freelance : <span>Available</span>
 										</p>
 									</div>
-								</div>
-								<div className="row">
+								</div> */}
+								{/* <div className="row">
 									<div className="buttons padd-15">
 										<a
 											href="#contact"
@@ -97,36 +97,104 @@ function About({ section, backSection }: any) {
 											Hire me
 										</a>
 									</div>
-								</div>
+								</div> */}
 							</div>
 
-							<div className="skills padd-15">
+							<div className=" padd-15">
 								{/* <!-- <h2>Skills</h2> --> */}
 								<ul className="skill-list">
-									<li>Javascript</li>
-									<li>Python</li>
-									<li>C++</li>
+									<li>JavaScript</li>
 									<li>TypeScript</li>
+									<li>C++</li>
 									<li>HTML</li>
 									<li>CSS</li>
-									<li>nodejs</li>
-									<li>nextjs</li>
-									<li>reactjs</li>
-									<li>expressjs</li>
-									<li>mongoDB</li>
-									<li>Posgrese</li>
+									<li>Node.js</li>
+									<li>Next.js</li>
+									<li>React.js</li>
+									<li>Express.js</li>
+									<li>MongoDB</li>
+									<li>PostgreSQL</li>
 									<li>MySQL</li>
-									<li>tailwind</li>
-									<li>bootstrap</li>
-									<li>git</li>
-									<li>github</li>
+									<li>Tailwind CSS</li>
+									<li>Kafka</li>
+									<li>Redis</li>
 								</ul>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div className="row">
+				<div className="row mt-8">
+					<div className="experience padd-15">
+						<h3 className="title">Experience</h3>
+						<div className="row">
+							<div className="timeline-box padd-15">
+								<div className="timeline dark-shadow">
+									{/* ======== timeline item ==========  */}
+									<div className="timeline-item">
+										<div className="circle-dot"></div>
+										<h3 className="timeline-date">
+											<i className="fa fa-calendar"></i> Jan 2025 - Present
+										</h3>
+										<h4 className="timeline-title">
+											Junior Associate Software Engineer @Unthinkable Solutions
+										</h4>
+										<p className="timeline-text">
+											Building and maintaining scalable and distributed systems, focusing on backend development and system design. Collaborating with cross-functional teams to deliver high-quality software solutions.
+										</p>
+									</div>
+
+									{/* ======== timeline item ==========  */}
+									<div className="timeline-item">
+										<div className="circle-dot"></div>
+										<h3 className="timeline-date">
+											<i className="fa fa-calendar"></i> April 2024 - Present
+										</h3>
+										<h4 className="timeline-title">Freelance Developer</h4>
+										<p className="timeline-text">
+											Designed and developed a website for Trenz, a Canadian
+											company, handling end-to-end delivery from UI design to
+											deployment.
+										</p>
+									</div>
+
+									{/* ======== timeline item ==========  */}
+									<div className="timeline-item">
+										<div className="circle-dot"></div>
+										<h3 className="timeline-date">
+											<i className="fa fa-calendar"></i> Jan 2024 - Mar 2024
+										</h3>
+										<h4 className="timeline-title">
+											Web Developer Intern @techsnap
+										</h4>
+										<p className="timeline-text">
+											Built the frontend for EduTech platform Unstarted.in,
+											developed a full Learning Management System (LMS) UI, and
+											created new landing pages for Techsnap using React and
+											modern CSS frameworks.
+										</p>
+									</div>
+
+									{/* <div className="timeline-item">
+												<div className="circle-dot"></div>
+												<h3 className="timeline-date">
+													<i className="fa fa-calendar"></i> 2020 -2021
+												</h3>
+												<h4 className="timeline-title">
+													Master in Computer Sciennce
+												</h4>
+												<p className="timeline-text">
+													Lorem ipsum dolor sit amet consectetur adipisicing
+													elit. Iusto, aut voluptatibus, quas hic nostrum quis
+													ratione a explicabo laborum voluptas vero, lib
+													mollitia minima, laborum voluptatem tempora id
+													numquam.
+												</p>
+											</div>  */}
+								</div>
+							</div>
+						</div>
+					</div>
 					<div className="education padd-15">
 						<h3 className="title">Education</h3>
 						<div className="row">
@@ -142,13 +210,14 @@ function About({ section, backSection }: any) {
 											B.tech in Computer Science
 										</h4>
 										<p className="timeline-text">
-											Currently pre final year B.tech CSE student. Mastering the
-											art to communicate with machines. Overall CGPA 8.6 CGPA(5
-											semister).
+											Completed B.Tech in Computer Science with a CGPA of 8.6.
+											Gained strong foundations in DSA, OS, DBMS, and system
+											design while building full-stack projects throughout the
+											program.
 										</p>
 									</div>
 
-									<div className="timeline-item">
+									{/* <div className="timeline-item">
 										<div className="circle-dot"></div>
 										<h3 className="timeline-date">
 											<i className="fa fa-calendar"></i> 2019- 2020
@@ -170,60 +239,7 @@ function About({ section, backSection }: any) {
 											Completed 10th from one of the prestigious school (Army
 											Public School Dhaula Kuan) and scored 89% overall.
 										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div className="experience padd-15">
-						<h3 className="title">Experience</h3>
-						<div className="row">
-							<div className="timeline-box padd-15">
-								<div className="timeline dark-shadow">
-									{/* ======== timeline item ==========  */}
-									<div className="timeline-item">
-										<div className="circle-dot"></div>
-										<h3 className="timeline-date">
-											<i className="fa fa-calendar"></i> Nov 2023 - April 2024
-										</h3>
-										<h4 className="timeline-title">
-											Web Developer Intern @techsnap
-										</h4>
-										<p className="timeline-text">
-											Built frontend of EduTech company called Unstarted.in,
-											created frontend of Learning Management System(LMS), built
-											new frontend page of techsnap.
-										</p>
-									</div>
-
-									{/* ======== timeline item ==========  */}
-									<div className="timeline-item">
-										<div className="circle-dot"></div>
-										<h3 className="timeline-date">
-											<i className="fa fa-calendar"></i> April 2024 - now
-										</h3>
-										<h4 className="timeline-title">Freelancing</h4>
-										<p className="timeline-text">
-											Building webpage for a canadian company called trenz.
-										</p>
-									</div>
-
-									{/* <div className="timeline-item">
-												<div className="circle-dot"></div>
-												<h3 className="timeline-date">
-													<i className="fa fa-calendar"></i> 2020 -2021
-												</h3>
-												<h4 className="timeline-title">
-													Master in Computer Sciennce
-												</h4>
-												<p className="timeline-text">
-													Lorem ipsum dolor sit amet consectetur adipisicing
-													elit. Iusto, aut voluptatibus, quas hic nostrum quis
-													ratione a explicabo laborum voluptas vero, lib
-													mollitia minima, laborum voluptatem tempora id
-													numquam.
-												</p>
-											</div>  */}
+									</div> */}
 								</div>
 							</div>
 						</div>

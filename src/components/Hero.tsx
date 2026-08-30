@@ -30,10 +30,10 @@ function Hero({section,backSection,theme}:any) {
 							<span className="typing">
 								<Typewriter
 									words={[
-										"Web Developer",
+										"Full Stack Developer",
 										"Graphics Designer",
 										"Competitive Programmer",
-										"Awesome",
+										"Problem Solver",
 									]}
 									loop={0}
 									typeSpeed={80}
@@ -44,7 +44,7 @@ function Hero({section,backSection,theme}:any) {
 							</span>
 						</h3>
 						<p>
-							Hello, I&apos;m a guy who believes in work is workship, the more you work the more you realize the more you can work.
+							Passionate about crafting clean code and creative solutions. I love building impactful web experiences — and the more I learn, the more excited I get about how much more there is to explore.
 						</p>
 						<a
 							href="/assets/resume.pdf"

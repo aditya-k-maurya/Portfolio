@@ -5,7 +5,6 @@ import Hero from "@/components/Hero";
 import Hobbies from "@/components/Hobbies";
 import Portfolio from "@/components/Portfolio";
 import { useActiveSection } from "@/context/ActiveSectionContext";
-import '@/components/css/font.css'
 import { useMode } from "@/context/ModeContext";
 
 export default function Home() {
